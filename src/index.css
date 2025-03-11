@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+theme {
+
+--font-display: "Bebas Neue","Inter","sans-serif";
+
+
+
+ --color-myPurple:  #6a0dad; 
+/* --color-myGold: #fcbf49; */
+/* --color-myGreen: #3eb489; */
+/* --color-myBlue: #38bdf8; */
+/* --color-myDark: #1f2937; */
+/* --color-myLight: #f9fafb; */
+}
