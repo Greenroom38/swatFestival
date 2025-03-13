@@ -4,24 +4,36 @@ import ticketBG from '/image/ticketBG.jpg'
 
 function Tickets() {
   return (
-    <section>
+    <section className='relative py-20 px-8 bg-myLight'>
         {/* BACKGROUND IMAGE */}
       <img src={ticketBG} 
-      alt="Festival and Backgruond" />
+      alt="Festival and Backgruond"
+      className='absolute inset-0 w-full h-full object-cover opacity-20 ' />
     
     {/* OVERLAY  */}
-    <div></div>
+    <div className='abso;ute inset-0 bg-mydark opacity-30 '></div>
 {/* CONTENT */}
-<div>
-    <h2>Get Your Tickets</h2>
-    <div>
+<div className='relative z-10 max-w-6xl mx-auto'>
+    <h2 className='text-5xl font-headline text-center text-myPurple'>Get Your Tickets</h2>
+    <div className='grid grid-cols-3 gap-10'>
         {ticketOptions.map((ticket, id) => (
-            <div>
-                {Tickets.highlighted && (
-                    <span className='text-9xl'>Most Popular</span>
+            <div key={id} className={`relative bg-myLight p-8 rounded-lg transform transition-transform duration-300 hover:scale-105 border-5 ${
+                ticket.highlighted ? 'border-myGold' : 'border-transparent'
+}`}>
+                {ticket.highlighted && (
+                    <span className='absolute top-2 right-2 bg-myGold text-myDark font-semibold px-3 py-1 rounded-full text-sm'>Most Popular</span>
                 )}
-                <h3>{ticket.type}</h3>
-                <p>{ticket.price}</p>
+                <h3 className='text-3xl font-headline text-center text-myPurple my-7'>{ticket.type}</h3>
+                <p className='text-center text-myGreen font-bold text-2xl mb-6'>{ticket.price}</p>
+                <ul className='space-y-2 mb-6'>
+                    {ticket.perks.map((perk,id) => (
+                        <li key={id} className='flex items-center'>
+                            <span className='w-2 h-2 bg-myGreen rounded-full mr-3'></span>
+                            <p className='font-body text-myDark'>{perk}</p>
+                        </li>
+                    ))}
+                </ul>
+                <button className='w-full bg-myPurple text-myLight py-3 rounded-lg font-semibold hover:text-myDark transition-colors duration-200'>Buy NOW</button>
 
             </div>
         ))}
