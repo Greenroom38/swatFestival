@@ -3,7 +3,7 @@ import Navbar from '../Compnents/Navbar'
 import Hero from '../Compnents/Hero'
 import Lineup from '../Compnents/Lineup'
 import Tickets from '../Compnents/Tickets'
-
+import Schedule from '../Compnents/Schedule'
 
 
 function App() {
@@ -13,6 +13,7 @@ function App() {
      <Hero/>
      <Lineup/>
      <Tickets/>
+     <Schedule/>
     </div>
   )
 }
