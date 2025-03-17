@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import festivalScheudle from './Data/FestivalSchedule'
-import scheduleBG from '/public/image/Vibe Photos/vibeBG.png'
+import festivalSchedule from './Data/FestivalSchedule'
+import scheduleBG from '/public/image/Vibe Photos/vibeBG.jpeg'
 
 
 function Schedule() {
@@ -14,7 +14,7 @@ function Schedule() {
   return (
     <section className='relative py-20 px-8 bg-myLight'>
         {/* BACKGROUND IMAGE */}
-      <img src="/public/image/Vibe Photos/vibeBG.png" 
+      <img src="/public/image/Vibe Photos/vibeBG.jpeg" 
       alt="Logo image" 
       className='absolute inset-0 w-full h-full object-cover opcity-20'
       />
@@ -28,7 +28,7 @@ function Schedule() {
     <div className='relative z-10 max-w-6xl mx-auto'>
         <h2 className='text-5xl font-headline text-center text-myPurple mb-12 tracking-wide'>Festival Schedule</h2>
         <div className='space-y-6'>
-            {festivalScheudle.map((day,id) => (
+            {festivalSchedule.map((day,id) => (
                 <div key={id} onClick={() => toggleDay(id)} className='bg-myLight rounded-lg shadow-lg overflow-hidden'>
                     <button className='w-full text-left px-6 py-4 bg-myPurple text-myLightg font-semibold text-xl flex justify-between items-cemter hover:bg-myGold hover:text-myDark transition-colors duration-200'>
                         {day.day}

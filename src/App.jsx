@@ -4,16 +4,17 @@ import Hero from '../Compnents/Hero'
 import Lineup from '../Compnents/Lineup'
 import Tickets from '../Compnents/Tickets'
 import Schedule from '../Compnents/Schedule'
-
+import Highlight from '../Compnents/Highlights'
 
 function App() {
   return (
     <div>
-     <Navbar /> 
+     <Navbar/> 
      <Hero/>
      <Lineup/>
      <Tickets/>
      <Schedule/>
+     <Highlight/> 
     </div>
   )
 }
